@@ -48,6 +48,7 @@ async function logout(req,res){
 async function refreshToken(req,res,next){
     const {refreshToken, userId} = req.body;
     const refreshTokenRecord = await AuthRepository.findOne('userId', userId);
+    console.log(refreshToken, refreshTokenRecord);
     if(!refreshToken || refreshToken !== refreshTokenRecord.refreshToken){
         return next(new HttpError('token invalid'));
     }
