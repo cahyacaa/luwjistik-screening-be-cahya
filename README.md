@@ -1,4 +1,4 @@
-![ci workflow](https://github.com/cahyacaa/luwjistik-screening-be-cahya/actions/workflows/ci/badge.svg)
+![ci workflow](https://github.com/cahyacaa/luwjistik-screening-be-cahya/actions/workflows/ci.yml/badge.svg)
 
 # Luwjistik BE Screening Test
 ###### This API for manage company order
