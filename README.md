@@ -56,7 +56,7 @@ first create **.env** file based on **.env.example**
 - GET   `base_url/api/v1/order/:id`
 
 
-      curl -X GET https://luwjistik-screening-be-cahya.herokuapp.com/api/v1/order/111SNA011 -H "Content-Type: application/json" -H "authorization: Bearer <token>"
+      curl -X GET https://luwjistik-screening-be-cahya.herokuapp.com/api/v1/order/111SNA011?page=1&perpage=10 -H "Content-Type: application/json" -H "authorization: Bearer <token>"
 
 ------------
 
