@@ -1,7 +1,7 @@
 const HttpError = require("../../common/http-error");
 const UserRepository = require("../../repository/users");
 const AuthRepository = require("../../repository/auth");
-const {comparePassword, generateToken} = require('../../services/auth');
+const {comparePassword, generateToken, verifyRefreshToken} = require('../../services/auth');
 const { loginReponse } = require('./schema/auth');
 
 
@@ -58,7 +58,6 @@ async function refreshToken(req,res,next){
     const newToken = await generateToken(userId, false);
     await AuthRepository.upsertById(userId,{tokenSession: newToken.token});
     return res.API.success(newToken);
-
 }
 
 module.exports = {loginWithEmail, logout, refreshToken};

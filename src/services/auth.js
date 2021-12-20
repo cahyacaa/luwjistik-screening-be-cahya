@@ -26,3 +26,11 @@ exports.generateToken = async function (userId, login= true) {
     token,refreshToken
   };
 };
+
+exports.verifyRefreshToken = async (token) => {
+  const result = jwt.verify(token, config.appConfig.refreshTokenSecret);
+  if (!result) {
+    return false;
+  }
+  return result;
+};
