@@ -11,7 +11,7 @@
     "migrate:seed:test": "cross-env NODE_ENV=test sequelize-cli db:migrate && cross-env NODE_ENV=test sequelize-cli db:seed:all",
     "migrate:seed:test:undo": "cross-env NODE_ENV=test sequelize-cli db:migrate:undo:all && cross-env NODE_ENV=test sequelize-cli db:seed:undo:all",
     "start:dev": "nodemon src/",
-    "start": "node src/",
+    "start": "npm run migrate:seed && node src/",
     "jest": "jest  --forceExit"
   },
   "author": "cahya nugroho",
