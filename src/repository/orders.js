@@ -13,8 +13,7 @@ const OrderRepository ={
         const result = await Orders.findAndCountAll({
           ...options,
           offset: offset,
-          limit: limit,
-          distinct: true
+          limit: limit
         });
         return result;
       },

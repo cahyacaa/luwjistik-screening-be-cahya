@@ -27,14 +27,24 @@ first create **.env** file based on **.env.example**
 
 ### List API
 > ###### if you want to run using https use this base url
-###### base url : https://luwjistik-be-screening-cahya.herokuapp.com
+> ###### base url :  https://luwjistik-screening-be-cahya.herokuapp.com
 ###### postman documentation [postman luwjistik test](https://documenter.postman.com/preview/9198348-df25e2d4-5df3-44e0-80c9-d78a77ebc18b?environment=&versionTag=latest&apiName=CURRENT&version=latest&documentationLayout=classic-double-column&right-sidebar=303030&top-bar=FFFFFF&highlight=EF5B25http:// "postman luwjistik test")
 
 - POST  `base_url/api/v1/auth/login`
 
+
+      curl -X POST https://luwjistik-screening-be-cahya.herokuapp.com/api/v1/auth/login -H "Content-Type: application/json" -d "{\"email\":\"luwjistik.test@mailinator.com\",\"password\":\"test12345\"}"
+    
+
 - POST `base_url/api/v1/order`
 
+
+      curl -X POST https://luwjistik-screening-be-cahya.herokuapp.com/api/v1/order -H "Content-Type: application/json" -H "authorization: Bearer <token>" -d '{"name":"I Phone 14","weight":"2 kg","recipientName":"Agus Haryo","recipientAddress":"Jl. Kamboja, Jakarta Utara","recipientPhone":"0811111111","orderId":"11GHJG","shipperId":"39e91527-faa9-4a54-b2e3-1e4953476c54"}'
+
 - GET   `base_url/api/v1/order/:id`
+
+
+      curl -X GET https://luwjistik-screening-be-cahya.herokuapp.com/api/v1/order/111SNA011 -H "Content-Type: application/json" -H "authorization: Bearer <token>"
 
 ------------
 
@@ -43,9 +53,7 @@ first create **.env** file based on **.env.example**
 
 - ###### Users
    
-
-
-    {
+              {
                 id:'39e91527-faa9-4a54-b2e3-1e4953476c54',
                 companyName: 'PT. Test Luwjistik',
                 email: 'luwjistik.test@mailinator.com',
@@ -54,13 +62,11 @@ first create **.env** file based on **.env.example**
                 password:'$2b$10$Zld./h8BvapjPzbmkhtPouIByKU2Oc14Dn2XQcv7nZzbwSowN6pqW',
                 createdAt: new Date(),
                 updatedAt: new Date()
-    }
+              }
 
 - ###### Orders
 
-   
-
-     {
+          {
               id:'39e91527-faa9-4a54-b2e3-1e4953476d12',
               name: 'Handphone Samsun A530E',
               status:'Out for delivery',
@@ -72,7 +78,6 @@ first create **.env** file based on **.env.example**
               shipperId:'39e91527-faa9-4a54-b2e3-1e4953476c54',
               createdAt: new Date(),
               updatedAt: new Date()
-        
           },{
             id:'39e91527-faa9-4a53-b2e3-1e4953476d12',
             name: 'Handphone Samsun A530E',
@@ -85,8 +90,7 @@ first create **.env** file based on **.env.example**
             shipperId:'39e91527-faa9-4a54-b2e3-1e4953476c54',
             createdAt: new Date(),
             updatedAt: new Date()
-          },
-          {
+          },{
             id:'39e91527-faa9-4a53-b2e3-1e4953476d12',
             name: 'Handphone Samsun A530E',
             status:'Order picked up',
@@ -100,7 +104,6 @@ first create **.env** file based on **.env.example**
             createdAt: new Date(),
             updatedAt: new Date()
           }
-
 
 
 #####  *author : Cahya Nugroho*
