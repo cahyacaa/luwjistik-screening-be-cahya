@@ -1,0 +1,5 @@
+node_modules
+.env
+127.0.0.1
+luwjistik.sqlite
+test.sqlite
