@@ -39,13 +39,13 @@ first create **.env** file based on **.env.example**
 - POST  `base_url/api/v1/auth/logout`
 
 
-      curl -X POST https://luwjistik-screening-be-cahya.herokuapp.com/api/v1/auth/login -H "Content-Type: application/json" -H "authorization: Bearer <token>"
+      curl -X POST https://luwjistik-screening-be-cahya.herokuapp.com/api/v1/auth/logout -H "Content-Type: application/json" -H "authorization: Bearer <token>"
 
 
 - POST  `base_url/api/v1/auth/refresh-token`
 
 
-      curl -X POST https://luwjistik-screening-be-cahya.herokuapp.com/api/v1/auth/refresh-token -H "Content-Type: application/json" -d '{"userId":"39e91527-faa9-4a54-b2e3-1e4953476c54","refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjM5ZTkxNTI3LWZhYTktNGE1NC1iMmUzLTFlNDk1MzQ3NmM1NCIsImlhdCI6MTYzOTk3NjM5OCwiZXhwIjoxNjQwMDYyNzk4fQ.5c2Q6-dmeKgghPDpNzSUk6MNQiZ7YtVNKACW2xpGoDk"}'
+      curl -X POST https://luwjistik-screening-be-cahya.herokuapp.com/api/v1/auth/refresh-token -H "Content-Type: application/json" -d '{"userId":"39e91527-faa9-4a54-b2e3-1e4953476c54","refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjM5ZTkxNTI3LWZhYTktNGE1NC1iMmUzLTFlNDk1MzQ3NmM1NCIsImlhdCI6MTYzOTk3ODE3NSwiZXhwIjoxNjQwMDY0NTc1fQ.eWHvsOKseNbBvvgRqF4wUSFTNOnGjwandloa0Xj96_g"}'
 
 
 - POST `base_url/api/v1/order`
